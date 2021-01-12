@@ -1,5 +1,6 @@
 type Query {
   read(id: ID!): User
+  readAll: [User!]!
 }
 type Mutation {
   create(username: String!, fullName: String!): User!

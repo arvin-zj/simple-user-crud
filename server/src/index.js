@@ -17,6 +17,9 @@ const resolvers = {
         },
       });
     },
+    readAll: (parent, args, context) => {
+      return context.prisma.user.findMany();
+    },
   },
   Mutation: {
     create: (parent, args, context) => {
