@@ -1,0 +1,13 @@
+type Query {
+  read(id: ID!): User
+}
+type Mutation {
+  create(username: String!, fullName: String!): User!
+  update(id: ID!, username: String, fullName: String): User
+  delete(id: ID!): User
+}
+type User {
+  id: ID!
+  username: String!
+  fullName: String!
+}
